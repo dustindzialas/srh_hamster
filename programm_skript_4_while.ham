@@ -1,0 +1,31 @@
+/*imperative program*/int koerner = 1;
+
+void main() {
+    wiederhole_umsEck(6);
+    gib();
+    rechtsUm();
+    wiederhole_umsEck(6);
+    linksUm();
+    System.out.println("Hamster hat " + koerner + " Koerner im Maul.");
+}
+
+void rechtsUm() {   //methode für rechtsdrehung
+	linksUm();
+	linksUm();
+	linksUm();
+}
+
+void umsEck() {    //methode fuer linksum, vor, rechtsum, vor
+	linksUm();
+	vor();
+	rechtsUm();
+	vor();
+}
+
+void wiederhole_umsEck (int count) { 
+	int i = 0;
+	while (i < count) {  //ab hier wird wiederholt, vorher nur einmal ausgeführt
+		umsEck();
+		i = i + 1;
+	}
+}
